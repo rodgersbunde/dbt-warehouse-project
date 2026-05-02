@@ -1,0 +1,11 @@
+{{ config(
+materialized='view')
+ }}
+
+SELECT
+	order_id,
+	productCode,
+    quantityOrdered,
+    priceEach,
+    orderLineNumber
+FROM {{ source('raw', 'orderdetails') }}

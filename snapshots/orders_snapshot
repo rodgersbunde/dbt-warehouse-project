@@ -1,0 +1,16 @@
+-- snapshots/orders_snapshot.sql
+
+{% snapshot orders_snapshot %}
+
+{{
+    config(
+        target_schema='snapshots',
+        unique_key='order_id',
+        strategy='check',
+        check_cols=['quantity', 'price']
+    )
+}}
+
+SELECT * FROM {{ ref('stg_orders') }}
+
+{% endsnapshot %}

@@ -1,0 +1,43 @@
+name: dbt CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  dbt-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repo
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # 3. Install dbt
+      - name: Install dbt
+        run: |
+          pip install dbt-postgres
+
+      # 4. Install dependencies
+      - name: dbt deps
+        run: dbt deps
+
+      # 5. Seed data
+      - name: dbt seed
+        run: dbt seed --target dev
+
+      # 6. Run models
+      - name: dbt run
+        run: dbt run --target dev
+
+      # 7. Run tests
+      - name: dbt test
+        run: dbt test --target dev
