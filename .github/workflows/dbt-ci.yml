@@ -10,6 +10,22 @@ jobs:
   dbt-run:
     runs-on: ubuntu-latest
 
+    # ✅ ADD POSTGRES DATABASE SERVICE
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_USER: dbt
+          POSTGRES_PASSWORD: dbt
+          POSTGRES_DB: warehouse
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
     steps:
       # 1. Checkout repo
       - name: Checkout repo
@@ -26,18 +42,23 @@ jobs:
         run: |
           pip install dbt-postgres
 
-      # 4. Install dependencies
+      # 4. Set environment variables for dbt connection
+      - name: Set DBT env vars
+        run: |
+          echo "DBT_USER=dbt" >> $GITHUB_ENV
+          echo "DBT_PASSWORD=dbt" >> $GITHUB_ENV
+          echo "DBT_DB=warehouse" >> $GITHUB_ENV
+          echo "DBT_HOST=localhost" >> $GITHUB_ENV
+          echo "DBT_PORT=5432" >> $GITHUB_ENV
+
+      # 5. Install dependencies
       - name: dbt deps
         run: dbt deps
 
-      # 5. Seed data
+      # 6. Seed data
       - name: dbt seed
         run: dbt seed --target dev
 
-      # 6. Run models
-      - name: dbt run
-        run: dbt run --target dev
-
-      # 7. Run tests
-      - name: dbt test
-        run: dbt test --target dev
+      # 7. Run models (BEST PRACTICE: build instead of run)
+      - name: dbt build
+        run: dbt build --target dev
