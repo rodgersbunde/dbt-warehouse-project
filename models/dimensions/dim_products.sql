@@ -3,6 +3,8 @@
 ) }}
 
 SELECT DISTINCT 
+    product_id,
     product_name,
-    category
-FROM {{ ref('stg_orders') }}
+    category,
+	order_id
+FROM {{ ref('products') }}

@@ -4,8 +4,10 @@ materialized='view')
 
 SELECT
 	order_id,
-	productCode,
-    quantityOrdered,
-    priceEach,
-    orderLineNumber
-FROM {{ source('raw', 'orderdetails') }}
+	customer_id,
+	product_name,
+	product_category as category,
+	quantity,
+	price,
+	quantity*price as total_amount
+FROM {{ ref('orders') }}

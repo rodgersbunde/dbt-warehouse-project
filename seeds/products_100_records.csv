@@ -1,0 +1,101 @@
+product_id,product_name,category,order_id
+1,Smart Watch,Automotive,1
+2,Water Bottle,Beauty,2
+3,Yoga Mat,Electronics,3
+4,Gaming Keyboard,Automotive,4
+5,Backpack,Home,5
+6,Portable Charger,Sports,6
+7,Vacuum Cleaner,Electronics,7
+8,Printer,Office,8
+9,Notebook,Office,9
+10,Jacket,Beauty,10
+11,Bluetooth Speaker,Office,11
+12,Yoga Mat,Food,12
+13,Basketball,Books,13
+14,Running Shoes,Books,14
+15,Gaming Keyboard,Automotive,15
+16,Backpack,Food,16
+17,Running Shoes,Office,17
+18,Smart Watch,Beauty,18
+19,Water Bottle,Clothing,19
+20,Gaming Keyboard,Electronics,20
+21,Vacuum Cleaner,Food,21
+22,Smart Watch,Clothing,22
+23,Basketball,Food,23
+24,Office Chair,Clothing,24
+25,Running Shoes,Toys,25
+26,Cookware Set,Office,26
+27,Bluetooth Speaker,Electronics,27
+28,Jacket,Sports,28
+29,Printer,Food,29
+30,Smart Watch,Food,30
+31,Running Shoes,Office,31
+32,Coffee Maker,Books,32
+33,Office Chair,Automotive,33
+34,Water Bottle,Electronics,34
+35,Jacket,Automotive,35
+36,Jacket,Books,36
+37,Sunglasses,Sports,37
+38,Coffee Maker,Home,38
+39,Headphones,Home,39
+40,Sunglasses,Clothing,40
+41,Cookware Set,Toys,41
+42,Coffee Maker,Office,42
+43,Wireless Mouse,Automotive,43
+44,Sunglasses,Beauty,44
+45,Yoga Mat,Books,45
+46,Printer,Electronics,46
+47,Printer,Clothing,47
+48,Basketball,Beauty,48
+49,Sunglasses,Books,49
+50,Cookware Set,Beauty,50
+51,Printer,Sports,51
+52,Water Bottle,Food,52
+53,Jacket,Clothing,53
+54,Desk Lamp,Electronics,54
+55,Wireless Mouse,Home,55
+56,Wireless Mouse,Toys,56
+57,Printer,Home,57
+58,Wireless Mouse,Beauty,58
+59,Bluetooth Speaker,Clothing,59
+60,Notebook,Books,60
+61,Sunglasses,Clothing,61
+62,Cookware Set,Beauty,62
+63,Coffee Maker,Home,63
+64,Vacuum Cleaner,Clothing,64
+65,Cookware Set,Sports,65
+66,Jacket,Clothing,66
+67,Gaming Keyboard,Office,67
+68,Office Chair,Books,68
+69,Vacuum Cleaner,Beauty,69
+70,Gaming Keyboard,Food,70
+71,Vacuum Cleaner,Sports,71
+72,Yoga Mat,Clothing,72
+73,Yoga Mat,Food,73
+74,Portable Charger,Clothing,74
+75,Coffee Maker,Toys,75
+76,Running Shoes,Automotive,76
+77,Jacket,Sports,77
+78,Jacket,Clothing,78
+79,Vacuum Cleaner,Electronics,79
+80,Cookware Set,Sports,80
+81,Coffee Maker,Clothing,81
+82,Yoga Mat,Automotive,82
+83,Vacuum Cleaner,Food,83
+84,Jacket,Office,84
+85,Sunglasses,Clothing,85
+86,Gaming Keyboard,Sports,86
+87,Cookware Set,Books,87
+88,Jacket,Food,88
+89,Smart Watch,Books,89
+90,Smart Watch,Toys,90
+91,Portable Charger,Books,91
+92,Gaming Keyboard,Books,92
+93,Yoga Mat,Toys,93
+94,Desk Lamp,Food,94
+95,Portable Charger,Sports,95
+96,Gaming Keyboard,Automotive,96
+97,Portable Charger,Beauty,97
+98,Water Bottle,Automotive,98
+99,Headphones,Office,99
+100,Bluetooth Speaker,Automotive,100

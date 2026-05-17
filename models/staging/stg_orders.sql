@@ -6,8 +6,8 @@ SELECT
 	order_id,
 	customer_id,
 	product_name,
-	product_category as category,
+	category,
 	quantity,
 	price,
 	quantity*price as total_amount
-FROM {{ source('raw', 'orders') }}
+FROM {{ ref('orders') }}
